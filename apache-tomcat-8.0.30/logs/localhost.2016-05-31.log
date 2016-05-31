@@ -1,0 +1,456 @@
+31-May-2016 11:08:01.879 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log ContextListener: contextInitialized()
+31-May-2016 11:08:01.879 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log SessionListener: contextInitialized()
+31-May-2016 11:16:55.512 INFO [localhost-startStop-2] org.apache.catalina.core.ApplicationContext.log SessionListener: contextDestroyed()
+31-May-2016 11:16:55.512 INFO [localhost-startStop-2] org.apache.catalina.core.ApplicationContext.log ContextListener: contextDestroyed()
+31-May-2016 11:17:24.856 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log ContextListener: contextInitialized()
+31-May-2016 11:17:24.856 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log SessionListener: contextInitialized()
+31-May-2016 11:19:17.795 INFO [localhost-startStop-2] org.apache.catalina.core.ApplicationContext.log No Spring WebApplicationInitializer types detected on classpath
+31-May-2016 11:19:17.852 INFO [localhost-startStop-2] org.apache.catalina.core.ApplicationContext.log Initializing Spring root WebApplicationContext
+31-May-2016 11:19:18.293 SEVERE [localhost-startStop-2] org.apache.catalina.core.StandardContext.listenerStart Exception sending context initialized event to listener instance of class org.springframework.web.context.ContextLoaderListener
+ org.springframework.beans.factory.BeanDefinitionStoreException: IOException parsing XML document from ServletContext resource [/WEB-INF/mvc-dispatcher-servlet.xml]; nested exception is java.io.FileNotFoundException: Could not open ServletContext resource [/WEB-INF/mvc-dispatcher-servlet.xml]
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:343)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:303)
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:180)
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:216)
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:187)
+	at org.springframework.web.context.support.XmlWebApplicationContext.loadBeanDefinitions(XmlWebApplicationContext.java:125)
+	at org.springframework.web.context.support.XmlWebApplicationContext.loadBeanDefinitions(XmlWebApplicationContext.java:94)
+	at org.springframework.context.support.AbstractRefreshableApplicationContext.refreshBeanFactory(AbstractRefreshableApplicationContext.java:129)
+	at org.springframework.context.support.AbstractApplicationContext.obtainFreshBeanFactory(AbstractApplicationContext.java:540)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:454)
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:403)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:306)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:106)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4812)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5255)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:725)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:701)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:717)
+	at org.apache.catalina.startup.HostConfig.deployWAR(HostConfig.java:945)
+	at org.apache.catalina.startup.HostConfig$DeployWar.run(HostConfig.java:1795)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.io.FileNotFoundException: Could not open ServletContext resource [/WEB-INF/mvc-dispatcher-servlet.xml]
+	at org.springframework.web.context.support.ServletContextResource.getInputStream(ServletContextResource.java:141)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:329)
+	... 25 more
+
+31-May-2016 11:19:18.307 INFO [localhost-startStop-2] org.apache.catalina.core.ApplicationContext.log Closing Spring root WebApplicationContext
+31-May-2016 11:19:18.353 SEVERE [localhost-startStop-2] org.apache.catalina.core.StandardContext.listenerStop Exception sending context destroyed event to listener instance of class org.springframework.web.context.ContextLoaderListener
+ java.lang.IllegalStateException: BeanFactory not initialized or already closed - call 'refresh' before accessing beans via the ApplicationContext
+	at org.springframework.context.support.AbstractRefreshableApplicationContext.getBeanFactory(AbstractRefreshableApplicationContext.java:170)
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:921)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:895)
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:841)
+	at org.springframework.web.context.ContextLoader.closeWebApplicationContext(ContextLoader.java:579)
+	at org.springframework.web.context.ContextLoaderListener.contextDestroyed(ContextLoaderListener.java:115)
+	at org.apache.catalina.core.StandardContext.listenerStop(StandardContext.java:4859)
+	at org.apache.catalina.core.StandardContext.stopInternal(StandardContext.java:5478)
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:232)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:160)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:725)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:701)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:717)
+	at org.apache.catalina.startup.HostConfig.deployWAR(HostConfig.java:945)
+	at org.apache.catalina.startup.HostConfig$DeployWar.run(HostConfig.java:1795)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+31-May-2016 11:21:00.331 INFO [http-apr-8090-exec-5] org.apache.catalina.core.ApplicationContext.log No Spring WebApplicationInitializer types detected on classpath
+31-May-2016 11:21:00.391 INFO [http-apr-8090-exec-5] org.apache.catalina.core.ApplicationContext.log Initializing Spring root WebApplicationContext
+31-May-2016 11:21:01.560 SEVERE [http-apr-8090-exec-5] org.apache.catalina.core.StandardContext.listenerStart Exception sending context initialized event to listener instance of class org.springframework.web.context.ContextLoaderListener
+ org.springframework.beans.factory.BeanDefinitionStoreException: IOException parsing XML document from ServletContext resource [/WEB-INF/mvc-dispatcher-servlet.xml]; nested exception is java.io.FileNotFoundException: Could not open ServletContext resource [/WEB-INF/mvc-dispatcher-servlet.xml]
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:343)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:303)
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:180)
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:216)
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:187)
+	at org.springframework.web.context.support.XmlWebApplicationContext.loadBeanDefinitions(XmlWebApplicationContext.java:125)
+	at org.springframework.web.context.support.XmlWebApplicationContext.loadBeanDefinitions(XmlWebApplicationContext.java:94)
+	at org.springframework.context.support.AbstractRefreshableApplicationContext.refreshBeanFactory(AbstractRefreshableApplicationContext.java:129)
+	at org.springframework.context.support.AbstractApplicationContext.obtainFreshBeanFactory(AbstractApplicationContext.java:540)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:454)
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:403)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:306)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:106)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4812)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5255)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.manager.ManagerServlet.start(ManagerServlet.java:1293)
+	at org.apache.catalina.manager.HTMLManagerServlet.start(HTMLManagerServlet.java:672)
+	at org.apache.catalina.manager.HTMLManagerServlet.doPost(HTMLManagerServlet.java:220)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:648)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:291)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.filters.CsrfPreventionFilter.doFilter(CsrfPreventionFilter.java:136)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.filters.SetCharacterEncodingFilter.doFilter(SetCharacterEncodingFilter.java:108)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:212)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:106)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:614)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:141)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:79)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:616)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:88)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:521)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1096)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:674)
+	at org.apache.tomcat.util.net.AprEndpoint$SocketProcessor.doRun(AprEndpoint.java:2500)
+	at org.apache.tomcat.util.net.AprEndpoint$SocketProcessor.run(AprEndpoint.java:2489)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.io.FileNotFoundException: Could not open ServletContext resource [/WEB-INF/mvc-dispatcher-servlet.xml]
+	at org.springframework.web.context.support.ServletContextResource.getInputStream(ServletContextResource.java:141)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:329)
+	... 47 more
+
+31-May-2016 11:21:01.567 INFO [http-apr-8090-exec-5] org.apache.catalina.core.ApplicationContext.log Closing Spring root WebApplicationContext
+31-May-2016 11:21:01.582 SEVERE [http-apr-8090-exec-5] org.apache.catalina.core.StandardContext.listenerStop Exception sending context destroyed event to listener instance of class org.springframework.web.context.ContextLoaderListener
+ java.lang.IllegalStateException: BeanFactory not initialized or already closed - call 'refresh' before accessing beans via the ApplicationContext
+	at org.springframework.context.support.AbstractRefreshableApplicationContext.getBeanFactory(AbstractRefreshableApplicationContext.java:170)
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:921)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:895)
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:841)
+	at org.springframework.web.context.ContextLoader.closeWebApplicationContext(ContextLoader.java:579)
+	at org.springframework.web.context.ContextLoaderListener.contextDestroyed(ContextLoaderListener.java:115)
+	at org.apache.catalina.core.StandardContext.listenerStop(StandardContext.java:4859)
+	at org.apache.catalina.core.StandardContext.stopInternal(StandardContext.java:5478)
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:232)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:160)
+	at org.apache.catalina.manager.ManagerServlet.start(ManagerServlet.java:1293)
+	at org.apache.catalina.manager.HTMLManagerServlet.start(HTMLManagerServlet.java:672)
+	at org.apache.catalina.manager.HTMLManagerServlet.doPost(HTMLManagerServlet.java:220)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:648)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:291)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.filters.CsrfPreventionFilter.doFilter(CsrfPreventionFilter.java:136)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.filters.SetCharacterEncodingFilter.doFilter(SetCharacterEncodingFilter.java:108)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:212)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:106)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:614)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:141)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:79)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:616)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:88)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:521)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1096)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:674)
+	at org.apache.tomcat.util.net.AprEndpoint$SocketProcessor.doRun(AprEndpoint.java:2500)
+	at org.apache.tomcat.util.net.AprEndpoint$SocketProcessor.run(AprEndpoint.java:2489)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+
+31-May-2016 11:21:19.303 INFO [localhost-startStop-3] org.apache.catalina.core.ApplicationContext.log SessionListener: contextDestroyed()
+31-May-2016 11:21:19.303 INFO [localhost-startStop-3] org.apache.catalina.core.ApplicationContext.log ContextListener: contextDestroyed()
+31-May-2016 11:22:58.885 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log No Spring WebApplicationInitializer types detected on classpath
+31-May-2016 11:22:58.956 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Initializing Spring root WebApplicationContext
+31-May-2016 11:22:59.339 SEVERE [localhost-startStop-1] org.apache.catalina.core.StandardContext.listenerStart Exception sending context initialized event to listener instance of class org.springframework.web.context.ContextLoaderListener
+ org.springframework.beans.factory.BeanDefinitionStoreException: IOException parsing XML document from ServletContext resource [/WEB-INF/mvc-dispatcher-servlet.xml]; nested exception is java.io.FileNotFoundException: Could not open ServletContext resource [/WEB-INF/mvc-dispatcher-servlet.xml]
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:343)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:303)
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:180)
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:216)
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:187)
+	at org.springframework.web.context.support.XmlWebApplicationContext.loadBeanDefinitions(XmlWebApplicationContext.java:125)
+	at org.springframework.web.context.support.XmlWebApplicationContext.loadBeanDefinitions(XmlWebApplicationContext.java:94)
+	at org.springframework.context.support.AbstractRefreshableApplicationContext.refreshBeanFactory(AbstractRefreshableApplicationContext.java:129)
+	at org.springframework.context.support.AbstractApplicationContext.obtainFreshBeanFactory(AbstractApplicationContext.java:540)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:454)
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:403)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:306)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:106)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4812)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5255)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:725)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:701)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:717)
+	at org.apache.catalina.startup.HostConfig.deployWAR(HostConfig.java:945)
+	at org.apache.catalina.startup.HostConfig$DeployWar.run(HostConfig.java:1795)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.io.FileNotFoundException: Could not open ServletContext resource [/WEB-INF/mvc-dispatcher-servlet.xml]
+	at org.springframework.web.context.support.ServletContextResource.getInputStream(ServletContextResource.java:141)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:329)
+	... 25 more
+
+31-May-2016 11:22:59.523 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Closing Spring root WebApplicationContext
+31-May-2016 11:22:59.541 SEVERE [localhost-startStop-1] org.apache.catalina.core.StandardContext.listenerStop Exception sending context destroyed event to listener instance of class org.springframework.web.context.ContextLoaderListener
+ java.lang.IllegalStateException: BeanFactory not initialized or already closed - call 'refresh' before accessing beans via the ApplicationContext
+	at org.springframework.context.support.AbstractRefreshableApplicationContext.getBeanFactory(AbstractRefreshableApplicationContext.java:170)
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:921)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:895)
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:841)
+	at org.springframework.web.context.ContextLoader.closeWebApplicationContext(ContextLoader.java:579)
+	at org.springframework.web.context.ContextLoaderListener.contextDestroyed(ContextLoaderListener.java:115)
+	at org.apache.catalina.core.StandardContext.listenerStop(StandardContext.java:4859)
+	at org.apache.catalina.core.StandardContext.stopInternal(StandardContext.java:5478)
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:232)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:160)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:725)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:701)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:717)
+	at org.apache.catalina.startup.HostConfig.deployWAR(HostConfig.java:945)
+	at org.apache.catalina.startup.HostConfig$DeployWar.run(HostConfig.java:1795)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+31-May-2016 11:23:00.176 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log ContextListener: contextInitialized()
+31-May-2016 11:23:00.176 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log SessionListener: contextInitialized()
+31-May-2016 11:25:22.718 INFO [localhost-startStop-2] org.apache.catalina.core.ApplicationContext.log No Spring WebApplicationInitializer types detected on classpath
+31-May-2016 11:25:22.778 INFO [localhost-startStop-2] org.apache.catalina.core.ApplicationContext.log Initializing Spring root WebApplicationContext
+31-May-2016 11:25:24.301 INFO [localhost-startStop-2] org.apache.catalina.core.ApplicationContext.log Initializing Spring FrameworkServlet 'dispatcher'
+31-May-2016 11:34:35.534 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.core.ApplicationContext.log Destroying Spring FrameworkServlet 'dispatcher'
+31-May-2016 11:34:35.537 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.core.ApplicationContext.log Closing Spring root WebApplicationContext
+31-May-2016 11:34:35.541 SEVERE [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.core.StandardContext.listenerStop Exception sending context destroyed event to listener instance of class org.springframework.web.context.ContextLoaderListener
+ java.lang.NoClassDefFoundError: org/springframework/web/context/ContextCleanupListener
+	at org.springframework.web.context.ContextLoaderListener.contextDestroyed(ContextLoaderListener.java:116)
+	at org.apache.catalina.core.StandardContext.listenerStop(StandardContext.java:4859)
+	at org.apache.catalina.core.StandardContext.stopInternal(StandardContext.java:5478)
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:232)
+	at org.apache.catalina.core.ContainerBase.removeChild(ContainerBase.java:827)
+	at org.apache.catalina.startup.HostConfig.undeploy(HostConfig.java:1404)
+	at org.apache.catalina.startup.HostConfig.checkResources(HostConfig.java:1330)
+	at org.apache.catalina.startup.HostConfig.check(HostConfig.java:1552)
+	at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:285)
+	at org.apache.catalina.util.LifecycleSupport.fireLifecycleEvent(LifecycleSupport.java:95)
+	at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:90)
+	at org.apache.catalina.core.ContainerBase.backgroundProcess(ContainerBase.java:1141)
+	at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.processChildren(ContainerBase.java:1377)
+	at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.processChildren(ContainerBase.java:1381)
+	at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.run(ContainerBase.java:1349)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.ClassNotFoundException: org.springframework.web.context.ContextCleanupListener
+	at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1333)
+	at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1167)
+	... 16 more
+
+31-May-2016 11:36:46.761 INFO [localhost-startStop-3] org.apache.catalina.core.ApplicationContext.log No Spring WebApplicationInitializer types detected on classpath
+31-May-2016 11:36:46.807 INFO [localhost-startStop-3] org.apache.catalina.core.ApplicationContext.log Initializing Spring root WebApplicationContext
+31-May-2016 11:36:47.543 INFO [localhost-startStop-3] org.apache.catalina.core.ApplicationContext.log Initializing Spring FrameworkServlet 'dispatcher'
+31-May-2016 12:24:40.662 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.core.ApplicationContext.log Destroying Spring FrameworkServlet 'dispatcher'
+31-May-2016 12:24:40.665 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.core.ApplicationContext.log Closing Spring root WebApplicationContext
+31-May-2016 12:24:40.669 SEVERE [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.core.StandardContext.listenerStop Exception sending context destroyed event to listener instance of class org.springframework.web.context.ContextLoaderListener
+ java.lang.NoClassDefFoundError: org/springframework/web/context/ContextCleanupListener
+	at org.springframework.web.context.ContextLoaderListener.contextDestroyed(ContextLoaderListener.java:116)
+	at org.apache.catalina.core.StandardContext.listenerStop(StandardContext.java:4859)
+	at org.apache.catalina.core.StandardContext.stopInternal(StandardContext.java:5478)
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:232)
+	at org.apache.catalina.core.ContainerBase.removeChild(ContainerBase.java:827)
+	at org.apache.catalina.startup.HostConfig.undeploy(HostConfig.java:1404)
+	at org.apache.catalina.startup.HostConfig.checkResources(HostConfig.java:1330)
+	at org.apache.catalina.startup.HostConfig.check(HostConfig.java:1552)
+	at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:285)
+	at org.apache.catalina.util.LifecycleSupport.fireLifecycleEvent(LifecycleSupport.java:95)
+	at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:90)
+	at org.apache.catalina.core.ContainerBase.backgroundProcess(ContainerBase.java:1141)
+	at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.processChildren(ContainerBase.java:1377)
+	at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.processChildren(ContainerBase.java:1381)
+	at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.run(ContainerBase.java:1349)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.ClassNotFoundException: org.springframework.web.context.ContextCleanupListener
+	at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1333)
+	at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1167)
+	... 16 more
+
+31-May-2016 12:27:32.257 INFO [localhost-startStop-4] org.apache.catalina.core.ApplicationContext.log No Spring WebApplicationInitializer types detected on classpath
+31-May-2016 12:27:32.317 INFO [localhost-startStop-4] org.apache.catalina.core.ApplicationContext.log Initializing Spring root WebApplicationContext
+31-May-2016 12:27:32.690 SEVERE [localhost-startStop-4] org.apache.catalina.core.StandardContext.listenerStart Exception sending context initialized event to listener instance of class org.springframework.web.context.ContextLoaderListener
+ org.springframework.beans.factory.xml.XmlBeanDefinitionStoreException: Line 12 in XML document from ServletContext resource [/WEB-INF/dispatcher-servlet.xml] is invalid; nested exception is org.xml.sax.SAXParseException; lineNumber: 12; columnNumber: 35; The prefix "mvc" for element "mvc:default-servlet-handler" is not bound.
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.doLoadBeanDefinitions(XmlBeanDefinitionReader.java:398)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:335)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:303)
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:180)
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:216)
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:187)
+	at org.springframework.web.context.support.XmlWebApplicationContext.loadBeanDefinitions(XmlWebApplicationContext.java:125)
+	at org.springframework.web.context.support.XmlWebApplicationContext.loadBeanDefinitions(XmlWebApplicationContext.java:94)
+	at org.springframework.context.support.AbstractRefreshableApplicationContext.refreshBeanFactory(AbstractRefreshableApplicationContext.java:129)
+	at org.springframework.context.support.AbstractApplicationContext.obtainFreshBeanFactory(AbstractApplicationContext.java:540)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:454)
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:403)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:306)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:106)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4812)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5255)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:725)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:701)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:717)
+	at org.apache.catalina.startup.HostConfig.deployWAR(HostConfig.java:945)
+	at org.apache.catalina.startup.HostConfig$DeployWar.run(HostConfig.java:1795)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.xml.sax.SAXParseException; lineNumber: 12; columnNumber: 35; The prefix "mvc" for element "mvc:default-servlet-handler" is not bound.
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(ErrorHandlerWrapper.java:203)
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.fatalError(ErrorHandlerWrapper.java:177)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:441)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:368)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:325)
+	at com.sun.org.apache.xerces.internal.impl.XMLNSDocumentScannerImpl.scanStartElement(XMLNSDocumentScannerImpl.java:289)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:2786)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:606)
+	at com.sun.org.apache.xerces.internal.impl.XMLNSDocumentScannerImpl.next(XMLNSDocumentScannerImpl.java:117)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:510)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:848)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:777)
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)
+	at com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(DOMParser.java:243)
+	at com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(DocumentBuilderImpl.java:348)
+	at org.springframework.beans.factory.xml.DefaultDocumentLoader.loadDocument(DefaultDocumentLoader.java:76)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.doLoadDocument(XmlBeanDefinitionReader.java:428)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.doLoadBeanDefinitions(XmlBeanDefinitionReader.java:390)
+	... 26 more
+
+31-May-2016 12:27:32.699 INFO [localhost-startStop-4] org.apache.catalina.core.ApplicationContext.log Closing Spring root WebApplicationContext
+31-May-2016 12:27:32.711 SEVERE [localhost-startStop-4] org.apache.catalina.core.StandardContext.listenerStop Exception sending context destroyed event to listener instance of class org.springframework.web.context.ContextLoaderListener
+ java.lang.IllegalStateException: BeanFactory not initialized or already closed - call 'refresh' before accessing beans via the ApplicationContext
+	at org.springframework.context.support.AbstractRefreshableApplicationContext.getBeanFactory(AbstractRefreshableApplicationContext.java:170)
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:921)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:895)
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:841)
+	at org.springframework.web.context.ContextLoader.closeWebApplicationContext(ContextLoader.java:579)
+	at org.springframework.web.context.ContextLoaderListener.contextDestroyed(ContextLoaderListener.java:115)
+	at org.apache.catalina.core.StandardContext.listenerStop(StandardContext.java:4859)
+	at org.apache.catalina.core.StandardContext.stopInternal(StandardContext.java:5478)
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:232)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:160)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:725)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:701)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:717)
+	at org.apache.catalina.startup.HostConfig.deployWAR(HostConfig.java:945)
+	at org.apache.catalina.startup.HostConfig$DeployWar.run(HostConfig.java:1795)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+31-May-2016 12:33:03.963 INFO [localhost-startStop-5] org.apache.catalina.core.ApplicationContext.log No Spring WebApplicationInitializer types detected on classpath
+31-May-2016 12:33:03.998 INFO [localhost-startStop-5] org.apache.catalina.core.ApplicationContext.log Initializing Spring root WebApplicationContext
+31-May-2016 12:33:05.415 INFO [localhost-startStop-5] org.apache.catalina.core.ApplicationContext.log Initializing Spring FrameworkServlet 'dispatcher'
+31-May-2016 12:34:33.192 INFO [http-apr-8090-exec-25] org.apache.catalina.core.ApplicationContext.log Destroying Spring FrameworkServlet 'dispatcher'
+31-May-2016 12:34:33.198 INFO [http-apr-8090-exec-25] org.apache.catalina.core.ApplicationContext.log Closing Spring root WebApplicationContext
+31-May-2016 12:34:37.235 INFO [http-apr-8090-exec-22] org.apache.catalina.core.ApplicationContext.log No Spring WebApplicationInitializer types detected on classpath
+31-May-2016 12:34:37.301 INFO [http-apr-8090-exec-22] org.apache.catalina.core.ApplicationContext.log Initializing Spring root WebApplicationContext
+31-May-2016 12:34:39.303 INFO [http-apr-8090-exec-22] org.apache.catalina.core.ApplicationContext.log Initializing Spring FrameworkServlet 'dispatcher'
+31-May-2016 12:35:11.622 INFO [http-apr-8090-exec-20] org.apache.catalina.core.ApplicationContext.log Destroying Spring FrameworkServlet 'dispatcher'
+31-May-2016 12:35:11.624 INFO [http-apr-8090-exec-20] org.apache.catalina.core.ApplicationContext.log Closing Spring root WebApplicationContext
+31-May-2016 12:36:56.753 INFO [localhost-startStop-6] org.apache.catalina.core.ApplicationContext.log No Spring WebApplicationInitializer types detected on classpath
+31-May-2016 12:36:56.789 INFO [localhost-startStop-6] org.apache.catalina.core.ApplicationContext.log Initializing Spring root WebApplicationContext
+31-May-2016 12:36:58.035 INFO [localhost-startStop-6] org.apache.catalina.core.ApplicationContext.log Initializing Spring FrameworkServlet 'dispatcher'
+31-May-2016 12:43:59.548 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.core.ApplicationContext.log Destroying Spring FrameworkServlet 'dispatcher'
+31-May-2016 12:43:59.554 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.core.ApplicationContext.log Closing Spring root WebApplicationContext
+31-May-2016 12:43:59.561 SEVERE [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.core.StandardContext.listenerStop Exception sending context destroyed event to listener instance of class org.springframework.web.context.ContextLoaderListener
+ java.lang.NoClassDefFoundError: org/springframework/web/context/ContextCleanupListener
+	at org.springframework.web.context.ContextLoaderListener.contextDestroyed(ContextLoaderListener.java:116)
+	at org.apache.catalina.core.StandardContext.listenerStop(StandardContext.java:4859)
+	at org.apache.catalina.core.StandardContext.stopInternal(StandardContext.java:5478)
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:232)
+	at org.apache.catalina.core.ContainerBase.removeChild(ContainerBase.java:827)
+	at org.apache.catalina.startup.HostConfig.undeploy(HostConfig.java:1404)
+	at org.apache.catalina.startup.HostConfig.checkResources(HostConfig.java:1330)
+	at org.apache.catalina.startup.HostConfig.check(HostConfig.java:1552)
+	at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:285)
+	at org.apache.catalina.util.LifecycleSupport.fireLifecycleEvent(LifecycleSupport.java:95)
+	at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:90)
+	at org.apache.catalina.core.ContainerBase.backgroundProcess(ContainerBase.java:1141)
+	at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.processChildren(ContainerBase.java:1377)
+	at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.processChildren(ContainerBase.java:1381)
+	at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.run(ContainerBase.java:1349)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.ClassNotFoundException: org.springframework.web.context.ContextCleanupListener
+	at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1333)
+	at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1167)
+	... 16 more
+
+31-May-2016 12:44:00.656 INFO [localhost-startStop-7] org.apache.catalina.core.ApplicationContext.log No Spring WebApplicationInitializer types detected on classpath
+31-May-2016 12:44:00.698 INFO [localhost-startStop-7] org.apache.catalina.core.ApplicationContext.log Initializing Spring root WebApplicationContext
+31-May-2016 12:44:02.251 INFO [localhost-startStop-7] org.apache.catalina.core.ApplicationContext.log Initializing Spring FrameworkServlet 'dispatcher'
+31-May-2016 12:52:08.804 INFO [localhost-startStop-8] org.apache.catalina.core.ApplicationContext.log Destroying Spring FrameworkServlet 'dispatcher'
+31-May-2016 12:52:08.820 INFO [localhost-startStop-8] org.apache.catalina.core.ApplicationContext.log Closing Spring root WebApplicationContext
+31-May-2016 12:52:08.831 INFO [localhost-startStop-8] org.apache.catalina.core.ApplicationContext.log SessionListener: contextDestroyed()
+31-May-2016 12:52:08.832 INFO [localhost-startStop-8] org.apache.catalina.core.ApplicationContext.log ContextListener: contextDestroyed()
+31-May-2016 17:36:49.212 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log ContextListener: contextInitialized()
+31-May-2016 17:36:49.212 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log SessionListener: contextInitialized()
+31-May-2016 17:38:01.375 INFO [localhost-startStop-2] org.apache.catalina.core.ApplicationContext.log Spring WebApplicationInitializers detected on classpath: [org.springframework.boot.autoconfigure.jersey.JerseyAutoConfiguration@4d64166f]
+31-May-2016 17:38:01.914 INFO [localhost-startStop-2] org.apache.catalina.core.ApplicationContext.log Initializing Spring root WebApplicationContext
+31-May-2016 17:38:04.575 INFO [localhost-startStop-2] org.apache.catalina.core.ApplicationContext.log Initializing Spring FrameworkServlet 'dispatcher'
+31-May-2016 17:38:13.035 INFO [localhost-startStop-2] org.apache.catalina.core.ApplicationContext.log Destroying Spring FrameworkServlet 'dispatcher'
+31-May-2016 17:38:13.052 INFO [localhost-startStop-2] org.apache.catalina.core.ApplicationContext.log Closing Spring root WebApplicationContext
+31-May-2016 17:38:13.069 INFO [localhost-startStop-2] org.apache.catalina.core.ApplicationContext.log SessionListener: contextDestroyed()
+31-May-2016 17:38:13.069 INFO [localhost-startStop-2] org.apache.catalina.core.ApplicationContext.log ContextListener: contextDestroyed()
+31-May-2016 17:49:13.707 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log ContextListener: contextInitialized()
+31-May-2016 17:49:13.707 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log SessionListener: contextInitialized()
+31-May-2016 17:49:26.114 INFO [localhost-startStop-2] org.apache.catalina.core.ApplicationContext.log Spring WebApplicationInitializers detected on classpath: [org.springframework.boot.autoconfigure.jersey.JerseyAutoConfiguration@675c0c07]
+31-May-2016 17:49:26.612 INFO [localhost-startStop-2] org.apache.catalina.core.ApplicationContext.log Initializing Spring root WebApplicationContext
+31-May-2016 17:49:29.016 INFO [localhost-startStop-2] org.apache.catalina.core.ApplicationContext.log Initializing Spring FrameworkServlet 'dispatcher'
+31-May-2016 17:52:53.887 INFO [localhost-startStop-3] org.apache.catalina.core.ApplicationContext.log Destroying Spring FrameworkServlet 'dispatcher'
+31-May-2016 17:52:53.892 INFO [localhost-startStop-3] org.apache.catalina.core.ApplicationContext.log Closing Spring root WebApplicationContext
+31-May-2016 17:52:53.908 INFO [localhost-startStop-3] org.apache.catalina.core.ApplicationContext.log SessionListener: contextDestroyed()
+31-May-2016 17:52:53.908 INFO [localhost-startStop-3] org.apache.catalina.core.ApplicationContext.log ContextListener: contextDestroyed()
+31-May-2016 17:54:41.883 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Spring WebApplicationInitializers detected on classpath: [org.springframework.boot.autoconfigure.jersey.JerseyAutoConfiguration@5b74d6e7]
+31-May-2016 17:54:42.384 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Initializing Spring root WebApplicationContext
+31-May-2016 17:54:45.197 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Initializing Spring FrameworkServlet 'dispatcher'
+31-May-2016 17:54:46.279 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log ContextListener: contextInitialized()
+31-May-2016 17:54:46.279 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log SessionListener: contextInitialized()
+31-May-2016 17:57:17.397 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.core.ApplicationContext.log Destroying Spring FrameworkServlet 'dispatcher'
+31-May-2016 17:57:17.404 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.core.ApplicationContext.log Closing Spring root WebApplicationContext
+31-May-2016 17:57:17.412 SEVERE [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.core.StandardContext.listenerStop Exception sending context destroyed event to listener instance of class org.springframework.web.context.ContextLoaderListener
+ java.lang.NoClassDefFoundError: org/springframework/web/context/ContextCleanupListener
+	at org.springframework.web.context.ContextLoaderListener.contextDestroyed(ContextLoaderListener.java:116)
+	at org.apache.catalina.core.StandardContext.listenerStop(StandardContext.java:4859)
+	at org.apache.catalina.core.StandardContext.stopInternal(StandardContext.java:5478)
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:232)
+	at org.apache.catalina.core.ContainerBase.removeChild(ContainerBase.java:827)
+	at org.apache.catalina.startup.HostConfig.undeploy(HostConfig.java:1404)
+	at org.apache.catalina.startup.HostConfig.checkResources(HostConfig.java:1330)
+	at org.apache.catalina.startup.HostConfig.check(HostConfig.java:1552)
+	at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:285)
+	at org.apache.catalina.util.LifecycleSupport.fireLifecycleEvent(LifecycleSupport.java:95)
+	at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:90)
+	at org.apache.catalina.core.ContainerBase.backgroundProcess(ContainerBase.java:1141)
+	at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.processChildren(ContainerBase.java:1377)
+	at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.processChildren(ContainerBase.java:1381)
+	at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.run(ContainerBase.java:1349)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.ClassNotFoundException: org.springframework.web.context.ContextCleanupListener
+	at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1333)
+	at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1167)
+	... 16 more
+

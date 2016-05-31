@@ -1,0 +1,36 @@
+09-Dec-2015 15:29:17.564 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log ContextListener: contextInitialized()
+09-Dec-2015 15:29:17.564 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log SessionListener: contextInitialized()
+09-Dec-2015 15:33:00.691 INFO [localhost-startStop-2] org.apache.catalina.core.ApplicationContext.log Spring WebApplicationInitializers detected on classpath: [com.vocalink.fps.ops.web.config.SpringWebInitializer@18f63d19]
+09-Dec-2015 15:33:01.349 INFO [localhost-startStop-2] org.apache.catalina.core.ApplicationContext.log Initializing Spring root WebApplicationContext
+09-Dec-2015 15:33:04.421 INFO [localhost-startStop-2] org.apache.catalina.core.ApplicationContext.log Initializing Spring FrameworkServlet 'spring-dispatcher'
+09-Dec-2015 15:35:15.392 INFO [localhost-startStop-3] org.apache.catalina.core.ApplicationContext.log SessionListener: contextDestroyed()
+09-Dec-2015 15:35:15.393 INFO [localhost-startStop-3] org.apache.catalina.core.ApplicationContext.log ContextListener: contextDestroyed()
+09-Dec-2015 15:35:15.397 INFO [localhost-startStop-3] org.apache.catalina.core.ApplicationContext.log Destroying Spring FrameworkServlet 'spring-dispatcher'
+09-Dec-2015 15:35:15.401 INFO [localhost-startStop-3] org.apache.catalina.core.ApplicationContext.log Closing Spring root WebApplicationContext
+09-Dec-2015 15:35:29.082 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Spring WebApplicationInitializers detected on classpath: [com.vocalink.fps.ops.web.config.SpringWebInitializer@585fc43e]
+09-Dec-2015 15:35:29.725 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Initializing Spring root WebApplicationContext
+09-Dec-2015 15:35:33.210 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Initializing Spring FrameworkServlet 'spring-dispatcher'
+09-Dec-2015 15:35:33.749 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log ContextListener: contextInitialized()
+09-Dec-2015 15:35:33.749 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log SessionListener: contextInitialized()
+09-Dec-2015 15:36:29.640 INFO [localhost-startStop-2] org.apache.catalina.core.ApplicationContext.log Destroying Spring FrameworkServlet 'spring-dispatcher'
+09-Dec-2015 15:36:29.647 INFO [localhost-startStop-2] org.apache.catalina.core.ApplicationContext.log Closing Spring root WebApplicationContext
+09-Dec-2015 15:36:29.661 INFO [localhost-startStop-2] org.apache.catalina.core.ApplicationContext.log SessionListener: contextDestroyed()
+09-Dec-2015 15:36:29.661 INFO [localhost-startStop-2] org.apache.catalina.core.ApplicationContext.log ContextListener: contextDestroyed()
+09-Dec-2015 15:36:52.889 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Spring WebApplicationInitializers detected on classpath: [com.vocalink.fps.ops.web.config.SpringWebInitializer@2579a6b]
+09-Dec-2015 15:36:53.592 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Initializing Spring root WebApplicationContext
+09-Dec-2015 15:36:56.958 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Initializing Spring FrameworkServlet 'spring-dispatcher'
+09-Dec-2015 15:36:57.463 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log ContextListener: contextInitialized()
+09-Dec-2015 15:36:57.463 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log SessionListener: contextInitialized()
+09-Dec-2015 15:42:07.452 INFO [localhost-startStop-2] org.apache.catalina.core.ApplicationContext.log Destroying Spring FrameworkServlet 'spring-dispatcher'
+09-Dec-2015 15:42:07.466 INFO [localhost-startStop-2] org.apache.catalina.core.ApplicationContext.log Closing Spring root WebApplicationContext
+09-Dec-2015 15:42:07.476 INFO [localhost-startStop-2] org.apache.catalina.core.ApplicationContext.log SessionListener: contextDestroyed()
+09-Dec-2015 15:42:07.476 INFO [localhost-startStop-2] org.apache.catalina.core.ApplicationContext.log ContextListener: contextDestroyed()
+09-Dec-2015 15:42:15.968 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Spring WebApplicationInitializers detected on classpath: [com.vocalink.fps.ops.web.config.SpringWebInitializer@60fb35c5]
+09-Dec-2015 15:42:16.656 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Initializing Spring root WebApplicationContext
+09-Dec-2015 15:42:19.929 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Initializing Spring FrameworkServlet 'spring-dispatcher'
+09-Dec-2015 15:42:20.508 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log ContextListener: contextInitialized()
+09-Dec-2015 15:42:20.508 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log SessionListener: contextInitialized()
+09-Dec-2015 16:22:35.416 INFO [localhost-startStop-2] org.apache.catalina.core.ApplicationContext.log Destroying Spring FrameworkServlet 'spring-dispatcher'
+09-Dec-2015 16:22:35.439 INFO [localhost-startStop-2] org.apache.catalina.core.ApplicationContext.log Closing Spring root WebApplicationContext
+09-Dec-2015 16:22:35.452 INFO [localhost-startStop-2] org.apache.catalina.core.ApplicationContext.log SessionListener: contextDestroyed()
+09-Dec-2015 16:22:35.452 INFO [localhost-startStop-2] org.apache.catalina.core.ApplicationContext.log ContextListener: contextDestroyed()
